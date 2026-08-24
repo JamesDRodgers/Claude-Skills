@@ -1,4 +1,4 @@
-# Running Premortems
+# Premortem
 
 A Claude Code skill that conducts rigorous prospective-hindsight premortems
 for projects, strategies, launches, decisions, implementations, technical

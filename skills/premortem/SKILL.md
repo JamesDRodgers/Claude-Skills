@@ -1,5 +1,5 @@
 ---
-name: running-premortems
+name: premortem
 description: >
   Conducts rigorous prospective-hindsight premortems for projects, strategies,
   launches, decisions, implementations, technical systems, and AI workflows.
@@ -10,7 +10,7 @@ description: >
   specific premortem methodology.
 ---
 
-# Running Premortems
+# Premortem
 
 ## Goal
 

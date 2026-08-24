@@ -1,7 +1,7 @@
 # Invoice Builder
 
-A Claude Code skill that generates client invoices for AI design,
-instructional design, and consulting work.
+A Claude Code skill that generates client invoices for any contract
+work.
 
 ## What it does
 

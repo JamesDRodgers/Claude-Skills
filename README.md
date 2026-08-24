@@ -3,5 +3,4 @@
 ## Skills
 
 - [`skills/invoice`](./skills/invoice) — Invoice Builder. Generates
-  client invoices for AI design, instructional design, and consulting
-  work, anchored to signed agreements.
+  client invoices for any contract work, anchored to signed agreements.

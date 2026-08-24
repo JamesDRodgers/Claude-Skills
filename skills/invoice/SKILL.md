@@ -1,6 +1,6 @@
 ---
 name: invoice
-description: "name: invoice-builder description: Generates client invoices for AI design, instructional design, and consulting work. Use when the user asks to create, draft, revise, or number an invoice, bill a client, log a payment, or check what has been invoiced. Anchors line items to signed agreements and never fabricates amounts, dates, hours, or approvals."
+description: "name: invoice-builder description: Generates client invoices for any contract work. Use when the user asks to create, draft, revise, or number an invoice, bill a client, log a payment, or check what has been invoiced. Anchors line items to signed agreements and never fabricates amounts, dates, hours, or approvals."
 ---
 
 ---

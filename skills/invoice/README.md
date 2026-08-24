@@ -1,6 +1,6 @@
 # Invoice Builder
 
-A Claude Code skill that generates client invoices for any contract
+A Claude Code skill that generates client invoices for independent contract
 work.
 
 ## What it does

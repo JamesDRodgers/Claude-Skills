@@ -6,10 +6,12 @@ hear the message, and suggests targeted revisions to expand reach.
 ## What it does
 
 Most persuasion fails because ideas are framed for one motivational lens
-while other audiences ask different questions. This skill scores a text's
-current appeal across all nine Enneagram types (0-100% coverage per type),
-identifies gap severity, and suggests revisions that shift which legitimate
-dimensions of the argument receive emphasis — not tone, not buzzwords.
+while other audiences ask different questions. This skill rates a text's
+current appeal across all nine Enneagram types on a qualitative scale
+(Absent / Weak / Moderate / Strong), prioritizes the gaps that actually
+matter (High / Medium / Low), and suggests revisions that shift which
+legitimate dimensions of the argument receive emphasis — not tone, not
+buzzwords.
 
 Every suggestion carries a confidence tier (high / moderate / exploratory)
 and passes through an integrity check: revisions may never remove valid
@@ -28,8 +30,8 @@ manipulation risk in persuasive writing.
 ## Files
 
 - [`SKILL.md`](./SKILL.md) — the skill definition: the nine motivational
-  frames, coverage scoring, red-flag detection, revision confidence tiers,
-  and integrity gates.
+  frames, qualitative coverage assessment, gap priority, red-flag detection,
+  revision confidence tiers, and integrity rules.
 
 ## Note
 

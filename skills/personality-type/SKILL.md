@@ -18,97 +18,45 @@ description: >
 
 # Enneagram Audience Reach
 
-Analyze a text to identify which Enneagram types it currently appeals to, then suggest revisions to expand reach without compromising integrity.
+Analyze a text to identify which motivational concerns it foregrounds, which it neglects, and how to broaden its persuasive reach without changing its factual claims or exploiting audience vulnerabilities.
 
 ## Core Principle
 
-**The same proposition should be made legible through the motivational question the recipient is most likely to ask.**
+**The same proposition can be made legible through different motivational questions without changing the proposition itself.**
 
-Not by changing tone or adding buzzwords, but by shifting which dimensions of the argument receive foreground emphasis.
+Do this by shifting the emphasis placed on benefits, objections, evidence, risks, examples, implementation, and calls to action.
+
+Do not merely swap vocabulary or stereotype a personality type.
 
 ---
 
-## Coverage Quantification
+## Epistemic Boundary
 
-The skill scores each type's coverage on a 0-100% scale:
+The Enneagram is not empirically established as a nine-type personality taxonomy. Evidence for its validity and reliability is mixed, and claims about wings, movement, and health levels have limited empirical support.
 
-**0-25% (Severely underserved):**
-- Type completely absent from text, OR
-- Type mentioned only dismissively ("some people worry about X, but...")
-- Gap severity: HIGH
+Use the nine types as rhetorical lenses for motivational salience, not as diagnoses or predictions of behavior.
 
-**26-50% (Underserved):**
-- Type addressed but thin or oblique
-- Key concerns acknowledged but not centered
-- Gap severity: MEDIUM
+The skill asks:
+> Would a reader who strongly prioritizes this concern find a serious answer in the text?
 
-**51-75% (Adequately served):**
-- Type's motivational question answered
-- Key evidence present for this type
-- Gap severity: LOW
+It does not ask:
+> What type is this person, and therefore how will they behave?
 
-**76-100% (Well-served):**
-- Type's concerns central to argument
-- Strong evidence for this type's criteria
-- Type is a primary audience
+Never weaken evidence, omit material caveats, invent claims, or manipulate vulnerabilities to improve "type fit."
 
-**How to score:**
-For each type, ask: "If someone with this motivational profile reads this text, will their key question be answered?"
-- Yes, clearly answered → 76-100%
-- Yes, but they have to infer → 51-75%
-- Partially answered → 26-50%
-- Not answered or dismissed → 0-25%
+---
 
-Output shows both current coverage and post-revision coverage, so users can see the net improvement.
+## Input Hierarchy
 
-## Gap Severity: Understanding the Impact of Underserved Types
+Always prioritize evidence in this order:
 
-Coverage percentage tells you how much a type is addressed. Gap Severity tells you how critical it is that you address them—the impact on overall credibility and persuasiveness if you leave that type behind.
+1. **Explicit audience requirements** — what the audience says it needs.
+2. **Observed contextual evidence** — what the situation demonstrably requires.
+3. **Known individual preferences** — what a person has repeatedly shown matters to them.
+4. **Self-identified Enneagram type** — if the user supplies it.
+5. **General type heuristic** — only when stronger evidence is unavailable.
 
-### Severity Tiers
-
-**HIGH SEVERITY:**
-- Type is completely absent from the text
-- OR type's concerns are actively dismissed or contradicted ("some people worry about X, but that's not the real issue")
-- Impact: Audience with this type feels unheard or attacked. They're likely to reject your entire argument as insensitive to their legitimate concerns.
-- Example: A text names harm to people (Type 2 concern) but then pivots to "the real subject is curiosity." Type 2 reads this as: "Your concern about human impact is secondary to our analytical interest." That dismissal damages credibility.
-
-**MEDIUM SEVERITY:**
-- Type's concern is mentioned but thin
-- Key question answered only obliquely or partially
-- Impact: Audience with this type notices the gap. They don't feel attacked, but they feel unaddressed. May seek information elsewhere. Mild credibility hit.
-- Example: Text mentions risk exists ("can easily become harassment") but provides no analysis of when or how. Type 6 (risk-conscious) feels the concern was acknowledged but abandoned.
-
-**LOW SEVERITY:**
-- Type is adequately served relative to text's scope
-- Not a primary audience, but their concerns are sufficiently covered they won't feel unheard
-- Impact: Type can read the text and think "this isn't written for me, but I'm not uncomfortable with it either."
-- Example: Type 8 (control/agency) in an analytical essay on language. The text isn't about power dynamics, but it's also not denying Type 8's concerns. They simply aren't the audience.
-
-### How to Assess Severity
-
-Ask yourself: If someone with this type read my text, would they feel:
-1. Heard and respected? → LOW severity (adequate coverage)
-2. Mostly heard, with some gaps? → MEDIUM severity (thin coverage)
-3. Unheard or dismissed? → HIGH severity (absent or contradicted)
-
-The severity jumps to HIGH when a type's core question is answered dismissively. It's not about quantity of words—it's about whether the answer feels genuine or like a deflection.
-
-### Why Severity Matters for Revision Strategy
-
-HIGH SEVERITY gaps demand immediate attention. Leaving them unaddressed costs you credibility with that audience segment, and it often signals a blind spot in your thinking.
-
-MEDIUM SEVERITY gaps are worth filling if you have the space and energy, but they're not credibility threats.
-
-LOW SEVERITY gaps may not need revision at all. A text can't appeal equally to all nine types; sometimes acknowledging a type's legitimacy without centering them is the right call.
-
-## Epistemic Warning
-
-The Enneagram is **not** empirically established as a nine-type personality taxonomy. The scientific evidence is mixed: some studies support reliability, others don't. Wings and movement between types have limited empirical support.
-
-**Treat Enneagram type as a rhetorical hypothesis about motivational salience, not as scientific fact.**
-
-Never weaken evidence or distort facts to achieve "type fit."
+If typology conflicts with observed or stated preferences, follow the actual person.
 
 ---
 
@@ -116,718 +64,567 @@ Never weaken evidence or distort facts to achieve "type fit."
 
 ### Input
 
-Paste or upload a text (sermon, speech, proposal, article, argument).
+Paste or upload a text such as a sermon, speech, proposal, article, fundraising appeal, change announcement, argument, or campaign message.
 
-Optionally specify:
-- Intended audience types
-- Target audience profile
-- Known audience concerns
+Optional context:
+- intended audience
+- known decision criteria
+- likely objections
+- self-identified Enneagram type
+- desired action
+- constraints on tone, length, or evidence
 
-### Analysis Phase
+### Analysis
 
-The skill will identify:
-1. Which type-motivations dominate the current framing
-2. Which types are adequately addressed; which are underserved
-3. What legitimate concerns are missing entirely
+Identify:
+- Which motivational questions are already answered well.
+- Which are weak, absent, or actively dismissed.
+- Which missing concerns actually matter for this audience and decision.
+- Which revisions can broaden reach without weakening the core proposition.
+- Whether the text contains manipulation, unsupported claims, or performative language.
 
-### Revision Suggestions
+### Revision
 
-For each underserved type, the skill suggests:
-- Minimal additions or reframes that make the message resonate
-- What evidence to highlight
-- What objection to address
-- How to preserve the core proposition
+For each material gap, suggest the smallest useful change:
+- foreground an existing benefit
+- add relevant evidence
+- acknowledge an objection
+- clarify risk or safeguards
+- show human consequences
+- preserve agency or optionality
+- specify implementation
+- strengthen the call to action
 
-### Output
-
-BEFORE presenting the Type Coverage Map, provide context:
-- Explain what the percentages represent: "This map shows how fully each type's motivational question is answered in your text."
-- Clarify what the bands mean: What does 0-25% represent vs. 76-100%? (See Coverage Quantification section)
-- Name your primary audience: "Your text speaks most directly to Types X, Y, Z (76-100%). These are your core audience."
-- Identify the gaps: "Types A and B are significantly underserved. Here's the impact of each gap..."
-
-Then present:
-- **Type Coverage Map:** A clear visualization or table showing quantified coverage (0-25% / 26-50% / 51-75% / 76-100%) for each type
-- **Gap Severity with Explanation:** For each underserved type, explain why the severity is rated HIGH/MEDIUM/LOW
-  - HIGH: "Type completely absent" or "Concern dismissed/contradicted" — explain which and show the impact on credibility
-  - MEDIUM: "Mentioned but thin" — show what's addressed vs. what's missing
-  - LOW: "Adequately served for scope" — explain why this type doesn't need immediate revision
-- **Specific revision suggestions:** Paragraph-level, with confidence tier attached (HIGH/MODERATE/EXPLORATORY)
-- **Integrity check:** Does expansion require compromising the core message?
-- **Red flag summary:** Any signs of creeping manipulation detected?
-
-**CRITICAL DESIGN PRINCIPLE:** The Type Coverage Map is meaningless without context. A user seeing raw percentages ("Type 1: 45%, Type 2: 20%") has no idea why those numbers matter or what they should do. Always lead with interpretation: "Your message resonates strongly with Types X and Y but nearly misses Types A and B. Here's what that means for your credibility and reach..." THEN show the map. The explanation precedes the data.
+Prefer minimal, evidence-grounded revisions over nine separate rewrites.
 
 ---
 
-## The Nine Types: Motivational Frames
+## Coverage Assessment
 
-### Type 1 — The Reformer
+Do not assign pseudo-precise percentages. Use four qualitative bands:
 
-**Persuasive Question:** Is this right and defensible?
+**Absent**
+The reader's core question is not meaningfully addressed, or is dismissed.
 
-**Motivational Currency:** Integrity, standards, improvement
+**Weak**
+The concern appears indirectly, briefly, or without enough evidence to answer the reader's question.
 
-**Foreground:** Principle → Discrepancy → Correction → Evidence → Implementation Safeguards
+**Moderate**
+The concern is substantially answered, though it is not central to the argument.
 
-**Evidence:** Criteria, standards, evidence of shortfall, safeguards, measurable improvement
+**Strong**
+The concern is central, explicit, and supported with evidence appropriate to that motivational lens.
 
-**Trust Builder:** Show you've done the homework. Provide principle, evidence, safeguards, measurable criteria.
+### Scoring Question
 
-**Language:** improve, correct, reliable, responsible, appropriate, rigorous, consistent, standard, accountable, defensible, transparent
+For each type, ask:
+> If someone strongly prioritized this motivational question, would the text give them a credible answer?
 
-**CTA:** Adopt the higher standard. Choose the option that meets all criteria. Bring into alignment.
+Use the answer to assign Absent / Weak / Moderate / Strong.
 
-**Resistance Trigger:** Sloppiness, moral inconsistency, lack of principle
-
-**Never Do:** Manipulate through shame or guilt. Use fear of being "bad."
-
-**Instead:** Give legitimate ethical case. Let them exercise judgment.
-
----
-
-### Type 2 — The Helper
-
-**Persuasive Question:** Does this genuinely help people?
-
-**Motivational Currency:** Relationship, contribution, appreciation, human impact
-
-**Foreground:** Community/Person → Need → Consequence → Solution → Human Benefit → Invitation
-
-**Evidence:** Stakeholder impact, genuine testimonials, downstream human consequences, recognition of contributions, mutual benefit
-
-**Trust Builder:** Humanize the issue. Show concrete impact. Recognize contributors. Demonstrate reciprocal benefit.
-
-**Language:** helping, contribution, care, appreciation, loyalty, community, support, relationships, human impact, recognition
-
-**CTA:** Help us make this possible. Support the people doing this work. Your contribution would make X possible for Y.
-
-**Resistance Trigger:** Coldness, exploitation, dismissing relationship concerns
-
-**Never Do:** Weaponize belonging. Equate compliance with caring.
-
-**Instead:** Make interpersonal value visible. Show genuine mutual benefit.
+Do not treat equal coverage of all nine types as a goal.
 
 ---
 
-### Type 3 — The Achiever
+## Gap Priority
 
-**Persuasive Question:** Will this work, and what result will it produce?
+Coverage and priority are different. A missing concern is not automatically a serious defect. Prioritize revision based on:
 
-**Motivational Currency:** Results, effectiveness, achievement, competence
+- **Audience relevance** — Is this concern likely to matter to the actual audience?
+- **Decision relevance** — Could it materially affect the decision?
+- **Credibility risk** — Does ignoring it make the argument look evasive, careless, or one-sided?
+- **Ethical consequence** — Does the omission conceal meaningful human cost, risk, or tradeoff?
 
-**Foreground:** Objective → Outcome → Advantage → Metric → Timeline → Execution
+Use three priority levels:
 
-**Evidence:** Benchmarks, performance comparisons, before/after metrics, case studies, milestones, measurable success criteria
+**High Priority**
+Revise when the omission could materially undermine trust, conceal a legitimate downside, or leave an important audience criterion unanswered.
 
-**Trust Builder:** Lead with outcome. Establish competence. Show measurable success. Define winning condition.
+Examples:
+- A safety-sensitive proposal gives no failure modes or safeguards.
+- A fundraising appeal gives an emotional story but no outcome or financial accountability.
+- A values statement gives commitments without actions, measures, or timelines.
 
-**Language:** achieve, results, effective, performance, advantage, progress, measurable, deliver, successful, efficient, accelerate, outcome
+**Medium Priority**
+Revise when the concern matters but is not decisive, or when the text acknowledges it without resolving it.
 
-**CTA:** Approve the 90-day pilot. Set the target and begin. Move from X to Y by Q4. Capture the opportunity.
-
-**Resistance Trigger:** Unclear objectives, inefficient process, benefits that can't be measured, no finish line
-
-**Never Do:** Exploit status insecurity. Use competitive threat as sole motivator.
-
-**Instead:** Outcome + credibility + authenticity. Real achievement beats hype.
-
----
-
-### Type 4 — The Individualist
-
-**Persuasive Question:** Is this real and meaningful, or generic?
-
-**Motivational Currency:** Authenticity, significance, identity, distinctiveness
-
-**Foreground:** Human Tension → Significance → Distinctive Insight → Proposition → Transformation → Invitation
-
-**Evidence:** First-person experience, qualitative nuance, distinctive examples, original thinking, what makes this unique
-
-**Trust Builder:** Recognize what is distinctive about this situation or person. Show how it preserves authenticity and identity.
-
-**Language:** meaningful, authentic, distinctive, personal, original, express, identity, experience, genuinely, create, depth, resonate, significance
-
-**CTA:** Create something worthy of. Choose the version that reflects who we are. Preserve what makes this distinctive.
-
-**Resistance Trigger:** Generic corporate jargon, "one size fits all," treating emotional concerns as irrelevant, fake inspiration
-
-**Never Do:** Manipulate identity. Intensify alienation or deficiency.
-
-**Instead:** Show evidence; emphasize meaning. Why they should care, not just whether it works.
+**Low Priority**
+No immediate revision is needed when the concern falls outside the text's scope or audience criteria and is not being dismissed. A text does not need to appeal equally to everyone.
 
 ---
 
-### Type 5 — The Investigator
+## Output Format
 
-**Persuasive Question:** Is this true and comprehensible?
+Lead with interpretation before presenting the map.
 
-**Motivational Currency:** Understanding, evidence, competence, clarity
+### 1. Audience Read
 
-**Foreground:** Claim → Mechanism → Evidence → Assumptions → Alternatives → Uncertainty → Conclusion
+State:
+- strongest motivational frames
+- materially underserved concerns
+- why those gaps matter, if they do
 
-**Evidence:** Primary sources, methodology, calculations, references, limitations, counterarguments, access to deeper material
+### 2. Coverage Map
 
-**Trust Builder:** Expose the reasoning. Make verification possible. Distinguish facts from judgment. Don't bluff.
+| Type | Motivational question | Coverage | Priority | Brief reason |
+|---|---|---|---|---|
+| 1 | Is this right and defensible? | Strong / Moderate / Weak / Absent | High / Medium / Low | ... |
+| 2 | Does this genuinely help people? | ... | ... | ... |
+| 3 | Will this work, and what result will it produce? | ... | ... | ... |
+| 4 | Is this real and meaningful, or generic? | ... | ... | ... |
+| 5 | Is this true and comprehensible? | ... | ... | ... |
+| 6 | Is this trustworthy and safe enough? | ... | ... | ... |
+| 7 | What does this make possible? | ... | ... | ... |
+| 8 | Is this direct, consequential, and under accountable control? | ... | ... | ... |
+| 9 | Can this work sustainably while considering affected interests? | ... | ... | ... |
 
-**Language:** evidence, mechanism, analysis, assumption, model, data, observed, likely, estimate, distinguish, underlying, system, explain, infer
+### 3. Revision Suggestions
 
-**CTA:** Review the evidence and decide. Test the model. Use these criteria to evaluate.
+For each material gap:
+- identify the missing concern
+- point to the relevant paragraph or claim
+- propose a minimal addition or reframe
+- identify evidence needed
+- assign a confidence tier
 
-**Resistance Trigger:** Hand waving, unsupported claims, withholding details, invading decision-making space
+### 4. Integrity Check
 
-**Never Do:** Overwhelm deliberately. Exploit fear of incompetence.
+State whether any suggested revision would:
+- distort evidence
+- suppress a valid objection
+- exploit insecurity or belonging
+- reduce another important audience concern
+- require unsupported claims
 
-**Instead:** Sufficient depth + clear abstraction + decision boundary.
+### 5. Red Flags
 
----
-
-### Type 6 — The Loyalist
-
-**Persuasive Question:** Is this trustworthy and safe enough? What could go wrong?
-
-**Motivational Currency:** Reliability, preparedness, alliance, justified confidence
-
-**Foreground:** Situation → Known Risks → Unknowns → Safeguards → Evidence → Backup Plan → Support
-
-**Evidence:** Track record, failure rates, case histories, external validation, guarantees when legitimate, contingency plans, known failure modes
-
-**Trust Builder:** Surface uncertainty yourself. Discuss downside. Show safeguards. Provide backup plan. Establish credentials.
-
-**Language:** proven, tested, verified, prepared, contingency, reliable, support, protect, safeguards, track record, transparent, risk, responsible, backup
-
-**CTA:** Approve a reversible pilot. Proceed with these safeguards. Authorize phase one before committing to phase two.
-
-**Resistance Trigger:** Hidden risks, false certainty, aggressive salesmanship, unexpected surprises
-
-**Never Do:** Frighten into action. Manufacture danger. Use "act now or everything collapses" without basis.
-
-**Instead:** Reduce uncertainty through transparency.
-
----
-
-### Type 7 — The Enthusiast
-
-**Persuasive Question:** What does this make possible?
-
-**Motivational Currency:** Opportunity, freedom, possibility, expansion
-
-**Foreground:** Possibility → Benefit → Concrete Opportunities → Simple Path → Freedom Preserved → Action
-
-**Evidence:** Prototypes, demos, future scenarios, multiple options, optional paths, speed-to-value
-
-**Trust Builder:** Show what becomes possible. Preserve choice. Demonstrate optionality.
-
-**Language:** opportunity, possibility, discover, explore, flexible, options, expand, unlock, experience, future, experiment, momentum, simplify, freedom, potential
-
-**CTA:** Try it. Explore the pilot. Open the next option. Begin the transition without locking in the rest.
-
-**Resistance Trigger:** Tedious repetition, excessive proceduralism, long restrictions list, closing off options, irreversible commitments
-
-**Never Do:** Exploit FOMO. Use artificial scarcity.
-
-**Instead:** Legitimate opportunity cost, real possibility space, low-commitment experimentation.
+Call out manipulation or performativity separately from ordinary persuasion gaps.
 
 ---
 
-### Type 8 — The Challenger
+## The Nine Motivational Lenses
 
-**Persuasive Question:** Is this strong, direct, and under my control? Who's really in control here?
+### Type 1 — Integrity and Standards
 
-**Motivational Currency:** Agency, leverage, strength, justice, control
+**Persuasive question:** Is this right and defensible?
 
-**Foreground:** Reality → Stakes → Recommendation → Leverage → Downside → Decision
+**Primary concern:** Integrity, standards, consistency, responsible improvement.
 
-**Evidence:** Clear consequences, who owns outcome, where authority lies, what leverage exists, strength of position
+**Useful evidence:** explicit criteria, standards applied consistently, evidence of shortfall, safeguards, measurable improvement
 
-**Trust Builder:** Be direct. Stand behind your case. Admit weakness plainly. Show backbone.
+**Trust builders:** clear principles, documented criteria, accountable implementation, acknowledgment of tradeoffs
 
-**Language:** direct, decide, control, own, protect, strong, leverage, accountable, act, challenge, responsibility, authority, consequences, decisive, stand
+**Common blind spot:** Sloppiness, inconsistency, or values without implementation.
 
-**CTA:** Make the decision. Take control of X. Authorize the team to proceed. Protect Y. Act before the alternative is imposed.
-
-**Resistance Trigger:** Hidden agendas, passive aggression, unclear authority, weakness disguised as consensus, controlling language
-
-**Never Do:** Provoke anger. Use every decision as dominance contest.
-
-**Instead:** Responsible power. Strength + protection. Clear claim + consequences + autonomy + accountability.
+**Do not:** Use shame, moral superiority, or fear of being "bad."
 
 ---
 
-### Type 9 — The Peacemaker
+### Type 2 — Human Impact and Contribution
 
-**Persuasive Question:** Can this work sustainably and peacefully? Have everyone's interests been considered?
+**Persuasive question:** Does this genuinely help people?
 
-**Motivational Currency:** Stability, inclusion, ease of integration, harmony
+**Primary concern:** Relationships, contribution, care, reciprocity, human consequences.
 
-**Foreground:** Shared Reality → Common Interests → Manageable Problem → Integrative Solution → Transition → Invitation
+**Useful evidence:** stakeholder impact, downstream consequences, genuine testimonials, recognition of contributions, mutual benefit
 
-**Evidence:** Areas of agreement, continuity preserved, who is affected, transition burden, what remains unchanged, how conflicts are handled
+**Trust builders:** concrete human effects, reciprocal value, acknowledgment of burdens
 
-**Trust Builder:** Show synthesis, not conflict. Emphasize continuity. Make change cognitively manageable.
+**Common blind spot:** Cold abstraction or treating people as instruments.
 
-**Language:** align, together, integrate, sustainable, steady, workable, common ground, continuity, support, simplify, balance, accommodate, consensus, manageable, resolve, shared
-
-**CTA:** Agree on the first step. Adopt the common framework. Move forward with what everyone supports.
-
-**Resistance Trigger:** Artificial polarization, unnecessary urgency, aggressive confrontation, ignoring stakeholder concerns, winner-versus-loser framing
-
-**Never Do:** Exploit conflict avoidance. Pressure to abandon legitimate objections.
-
-**Instead:** Draw out agency. Reconcile interests. Address disagreement directly.
+**Do not:** Weaponize belonging, care, gratitude, or guilt.
 
 ---
 
-## Type-Specific Evidence Standards
+### Type 3 — Outcomes and Effectiveness
 
-What counts as "good evidence" varies by type. Use this checklist when evaluating whether current evidence will persuade:
+**Persuasive question:** Will this work, and what result will it produce?
 
-**Type 1:** Measurable criteria | Before/after comparison | Standards applied consistently | Safeguards documented | Improvement quantified
+**Primary concern:** Results, competence, progress, effectiveness.
 
-**Type 2:** Stakeholder impact named | Genuine testimonial | Downstream consequences described | Contribution recognized | Mutual benefit shown
+**Useful evidence:** success metrics, benchmarks, timelines, ownership, case studies, kill criteria
 
-**Type 3:** Benchmark or competitor comparison | Clear timeline | Ownership assigned | Kill criterion defined | Success metric measurable
+**Trust builders:** clear objective, measurable outcome, credible execution plan
 
-**Type 4:** First-person experience | Qualitative detail | What makes this distinctive | Emotional truth acknowledged | Authentic voice present
+**Common blind spot:** Aspirations without a finish line.
 
-**Type 5:** Primary source cited | Methodology explained | Assumptions stated | Limitations acknowledged | Alternative explanations considered
-
-**Type 6:** Track record provided | Specific failure modes addressed | Contingency plan named | External validation included | Reversibility demonstrated
-
-**Type 7:** Multiple options shown | Future scenario sketched | Speed-to-value implied | Choice preserved | Low-commitment entry point clear
-
-**Type 8:** Clear consequences stated | Authority/ownership transparent | Leverage identified | Strength of position shown | Directness evident
-
-**Type 9:** Areas of agreement listed | Continuity emphasized | Who is affected named | Transition burden described | What stays unchanged noted
+**Do not:** Exploit status insecurity or competitive threat.
 
 ---
 
-## Revision Confidence Scoring
+### Type 4 — Meaning and Authenticity
 
-Attach a confidence tier to every suggestion:
+**Persuasive question:** Is this real and meaningful, or generic?
 
-**HIGH CONFIDENCE:**
-- Addresses a documented blind spot (type is completely absent or actively dismissed)
-- Revision uses legitimate dimensions already present in the proposition
-- Adding evidence/framing that's grounded in fact, not speculation
-- Example: Text has zero mention of risk; Type 6 revision adds safeguards already in place
+**Primary concern:** Authenticity, significance, identity, distinctiveness.
 
-**MODERATE CONFIDENCE:**
-- Fills a gap but text may address it obliquely elsewhere
-- Requires the user to gather additional evidence
-- Reasonable interpretation of the core proposition, but not explicitly stated
-- Example: Text mentions "helping people" but doesn't emphasize relational impact; Type 2 revision deepens connection language
+**Useful evidence:** first-person experience, qualitative nuance, distinctive examples, original insight, acknowledgment of emotional reality
 
-**EXPLORATORY:**
-- Speculative; could strengthen appeal but is not essential
-- Requires new claims or significant interpretation
-- Introduces dimensions not currently supported by the text
-- Example: Text is silent on personal meaning; Type 4 revision suggests authenticity angle that requires user validation
+**Trust builders:** specificity, genuine voice, recognition of what is distinctive
+
+**Common blind spot:** Generic language, false inspiration, or one-size-fits-all framing.
+
+**Do not:** Manipulate identity, alienation, or deficiency.
 
 ---
 
-## Red Flag Detection: Manipulation Warnings
+### Type 5 — Evidence and Understanding
 
-The skill will flag if revisions approach manipulation. Warning signs across multiple patterns:
+**Persuasive question:** Is this true and comprehensible?
 
-**CRITICAL — Do not implement:**
-- Suggesting removal of valid counterarguments
-- Adding language that exploits basic fears ("don't want to be seen as selfish," "afraid of being left behind")
-- Narrowing options to make choice appear forced
-- Introducing claims unsupported by current evidence
-- Weaponizing Type 2 (care/belonging) to suppress Type 3 (results) and Type 5 (evidence) accountability questions
+**Primary concern:** Evidence, mechanism, clarity, intellectual independence.
 
-**HIGH CAUTION — Revise the revision:**
-- Emotional pressure replacing substantive case ("you should care because..." vs. explaining actual consequence)
-- Activating insecurity rather than addressing legitimate concern
-- Soft dismissal of objections ("those concerns are minor compared to...")
-- Language that implies "if you don't agree, you're X type of person" (identity manipulation)
-- Pairing emotional narratives (Type 2) with suppression of outcome transparency: "Here's Maya's story [emotional hook], donate now [pressure], financial reports available [buried/vague]"
+**Useful evidence:** primary sources, methodology, assumptions, calculations, limitations, alternative explanations
 
-**MODERATE CAUTION — User decision required:**
-- Adding language that *could* be read as pressure, even if not intended
-- Revisions that only appeal to one type while actively weakening others
-- Evidence that's technically true but selectively framed to the point of distortion
-- Placing Type 2 narrative at high emphasis while relegating Type 3/5 documentation to fine print or appendix
+**Trust builders:** exposed reasoning, verification paths, clear fact/judgment distinctions, explicit uncertainty
 
-**Specific Detection: Type 2 Weaponization Pattern**
+**Common blind spot:** Hand-waving, unsupported certainty, or withheld reasoning.
 
-When analyzing texts that lead with emotional narrative (Type 2), assess whether they systematically suppress Type 3/5:
-
-**Red Flag Indicators:**
-
-1. **Compelling personal story (Type 2) + absent outcome metrics (Type 3)**
-   - "Here's how we changed someone's life" with zero data on program reach, success rate, or cost-effectiveness
-   - Legitimate Type 2 → story grounded in quantified context (Case 14 example: story + metrics together)
-   - Weaponized Type 2 → story in isolation without numerical accountability
-
-2. **Emotional appeal (Type 2) + unverified claims (Type 5)**
-   - "47 more Mayas are waiting" without source or documentation
-   - "Every dollar becomes dinner, counseling, tutoring" without cost breakdown or evidence
-   - Legitimate Type 2 → emotional impact paired with transparent resource allocation
-   - Weaponized Type 2 → narrative precision without financial precision
-
-3. **Urgency language (Type 7 coercion) + Type 2 belonging trigger**
-   - "Will you stand with us? Donate now" (Type 7 FOMO + Type 2 belonging pressure)
-   - Suppresses Type 3 deliberation: "Before I commit, let me see outcomes data"
-   - Suppresses Type 6 caution: "What safeguards ensure my money reaches intended recipients?"
-
-**Output:** Any Type 2 weaponization flags trigger explicit warnings:
-> "This text pairs Maya's authentic story (Type 2 strength) with suppressed outcome documentation (Type 3/5 absent). Readers asking 'Does my donation create measurable change?' or 'Where does my money actually go?' will find no answer in this framing. Recommend pairing story with: [program outcomes], [cost per participant], [independent audit]."
+**Do not:** Overwhelm deliberately or exploit fear of incompetence.
 
 ---
 
-## Type-Specific Objection Handling
+### Type 6 — Reliability and Preparedness
 
-### Type 1 Objection: "This isn't the right way."
-**Answer:** Let's establish the criteria for the right way and compare alternatives against them.
+**Persuasive question:** Is this trustworthy and safe enough? What could go wrong?
 
-### Type 2 Objection: "What about the people affected?"
-**Answer:** Here's the expected impact and what we're doing to reduce burden.
+**Primary concern:** Reliability, preparedness, justified confidence, support.
 
-### Type 3 Objection: "Will this actually deliver?"
-**Answer:** Here's result, timeline, owner, benchmark, and kill criterion.
+**Useful evidence:** track record, known failure modes, safeguards, contingency plans, external validation, reversibility
 
-### Type 4 Objection: "This feels generic/disconnected."
-**Answer:** Which part seems wrong? We can customize without compromising the core.
+**Trust builders:** surfaced uncertainty, downside analysis, backup plans, credible support
 
-### Type 5 Objection: "I don't see how you reached that conclusion."
-**Answer:** Conclusion comes from A → B → C. Here's supporting evidence for the uncertain part.
+**Common blind spot:** Hidden risks or false certainty.
 
-### Type 6 Objection: "What if X happens?"
-**Answer:** If X happens, consequence is Y and contingency is Z.
+**Do not:** Manufacture danger or frighten the audience into action.
 
-### Type 7 Objection: "Does this lock us in?"
-**Answer:** Only through stage two. Stage one is reversible; alternatives remain open.
+---
 
-### Type 8 Objection: "Why should I give up control?"
-**Answer:** You shouldn't unless the trade produces greater leverage elsewhere. Here's exactly what authority changes and what remains yours.
+### Type 7 — Possibility and Optionality
 
-### Type 9 Objection: "This will create a huge mess."
-**Answer:** The transition affects these two workflows; everything else remains unchanged. Here's the sequencing.
+**Persuasive question:** What does this make possible?
+
+**Primary concern:** Opportunity, flexibility, possibility, preserved choice.
+
+**Useful evidence:** prototypes, future scenarios, multiple paths, speed to value, reversible experiments
+
+**Trust builders:** credible possibilities, visible optionality, low-commitment entry points
+
+**Common blind spot:** Framing every decision as restriction, burden, or irreversible commitment.
+
+**Do not:** Exploit FOMO or artificial scarcity.
+
+---
+
+### Type 8 — Agency and Accountability
+
+**Persuasive question:** Is this direct, consequential, and under accountable control?
+
+**Primary concern:** Agency, strength, leverage, justice, authority.
+
+**Useful evidence:** clear consequences, ownership, decision rights, leverage, downside, accountability
+
+**Trust builders:** direct claims, clear authority, admitted weaknesses, visible responsibility
+
+**Common blind spot:** Hidden agendas, vague ownership, or control disguised as consensus.
+
+**Do not:** Turn every disagreement into a dominance contest.
+
+---
+
+### Type 9 — Integration and Stability
+
+**Persuasive question:** Can this work sustainably while considering affected interests?
+
+**Primary concern:** Stability, inclusion, continuity, manageable integration.
+
+**Useful evidence:** areas of agreement, who is affected, transition burden, continuity preserved, conflict handling, what remains unchanged
+
+**Trust builders:** synthesis, manageable sequencing, acknowledgment of stakeholder concerns
+
+**Common blind spot:** Artificial polarization or unnecessary disruption.
+
+**Do not:** Exploit conflict avoidance or pressure people to abandon legitimate objections.
+
+---
+
+## Type-Specific Evidence Checklist
+
+Use these as prompts, not requirements.
+
+| Type | Evidence that often helps |
+|---|---|
+| 1 | criteria, standards, safeguards, before/after comparison |
+| 2 | stakeholder impact, testimonials, mutual benefit, downstream effects |
+| 3 | metrics, benchmarks, timeline, owner, success or kill criteria |
+| 4 | first-person experience, qualitative detail, distinctive insight |
+| 5 | primary sources, methodology, assumptions, limitations, alternatives |
+| 6 | failure modes, contingency plans, track record, external validation |
+| 7 | options, scenarios, prototypes, reversibility, speed to value |
+| 8 | authority, consequences, leverage, ownership, accountability |
+| 9 | continuity, affected parties, transition burden, common ground |
 
 ---
 
 ## Mixed-Audience Persuasion
 
-Most audiences are not monolithic. Instead of nine separate arguments, construct a **multi-motive argument**.
+Most audiences are mixed. Do not write nine separate arguments unless the user explicitly asks for them.
+
+Use this sequence instead:
+
+1. **Reality** — What is happening?
+2. **Stakes** — Why does it matter?
+3. **Principle** — What should a good solution accomplish?
+4. **Recommendation** — What should we do?
+5. **Mechanism and evidence** — Why should this work?
+6. **Consequences and risks** — Who benefits, who bears costs, and what could go wrong?
+7. **Action and agency** — What happens next, and what choices remain?
+
+This structure naturally serves multiple motivational lenses without making the text feel like an Enneagram exercise.
+
+---
+
+## Revision Confidence
+
+Attach a confidence tier to each recommendation.
+
+**High Confidence**
+Use when:
+- the gap is clearly visible
+- the revision uses facts already present or readily verifiable
+- the concern is relevant to the actual audience or decision
+
+**Moderate Confidence**
+Use when:
+- the gap is plausible but partly addressed elsewhere
+- additional evidence may be needed
+- the recommendation depends on a reasonable interpretation of the proposition
+
+**Exploratory**
+Use when:
+- the suggested angle is speculative
+- it introduces a dimension not clearly supported by the text
+- the audience relevance is uncertain
+
+Exploratory suggestions must be labeled as such and should not be presented as necessary fixes.
+
+---
+
+## Integrity Rules
+
+These rules override persuasive optimization. The skill must never:
+
+1. Fabricate evidence.
+2. Remove or weaken a valid counterargument to make the message more persuasive.
+3. Hide material disadvantages, uncertainty, costs, or risks.
+4. Exploit fear, shame, belonging, status insecurity, alienation, anger, or conflict avoidance.
+5. Treat a type as a diagnosis of intelligence, morality, competence, profession, or behavior.
+6. Infer wings, stress states, or "health levels" from limited text.
+7. Replace substantive evidence with emotional pressure.
+8. Narrow choices deceptively or imply false urgency.
+9. Optimize for one motivational lens while silently weakening another material concern.
+10. Prefer type assumptions over explicit audience evidence.
+
+If a proposed revision violates one of these rules, block or rewrite the revision rather than implementing it.
+
+---
+
+## Manipulation Red Flags
+
+**Critical — Do not implement revisions that:**
+- remove valid counterarguments
+- invent or exaggerate claims
+- use basic fears as attack surfaces
+- force a false binary choice
+- conceal material risk or cost
+- equate agreement with goodness, loyalty, care, intelligence, or courage
+
+**High Caution — Revise when language:**
+- pressures emotionally instead of making the substantive case
+- activates insecurity rather than answering a legitimate concern
+- dismisses objections as trivial or disloyal
+- uses identity labels to pressure agreement
+- leads with human stories while burying outcome or financial accountability
+
+### Type 2 Weaponization Check
+
+When a text relies heavily on human stories or belonging, ask:
+- Are measurable outcomes visible?
+- Are factual claims verifiable?
+- Is resource use transparent when relevant?
+- Can the reader deliberate without emotional penalty?
+
+An authentic human story is not a problem. A story used to suppress accountability is.
+
+---
+
+## Performativity Check
+
+Values without implementation can create a credibility gap.
+
+Flag statements such as "we believe," "we value," "we are committed to" when the text gives no corresponding action, owner, target, timeline, measurement, or evidence of follow-through.
+
+Do not infer insincerity. Identify the intent-action gap and recommend implementation anchors.
 
 Example:
-> "The proposal fixes an accountability problem in the current system [1], reduces repetitive work for the people administering it [2], and should improve cycle time by approximately 15% [3]. The underlying architecture is documented here [5], including three implementation risks and their mitigations [6]. It also gives teams greater flexibility afterward [7], while keeping final authority inside the organization [8]. Most existing workflows remain unchanged during the transition [9]."
+> "We are committed to transparency."
 
-**Universal Sequencing:**
+Stronger:
+> "We will publish the relevant metrics quarterly, beginning in October, with definitions and methodology available to readers."
 
-1. Establish common reality (what is happening?)
-2. Establish importance (why does it matter?)
-3. Establish principle (what should a good solution accomplish?)
-4. Give recommendation (what should we do?)
-5. Explain mechanism (how does it work?)
-6. Demonstrate outcomes (what will improve?)
-7. Address human consequences (who benefits/bears costs?)
-8. Address risk (what could go wrong?)
-9. Preserve agency (what choices remain?)
-10. Show implementation (how do we avoid chaos?)
-11. Give explicit CTA (what exactly should they do?)
-
-That architecture naturally covers most motivational lenses without feeling like an Enneagram document.
+Only add details that are true or that the user can validate.
 
 ---
 
-## Critical Constraints
+## Crisis Communication Check
 
-The skill will **never**:
+In crisis or high-stress communication, texts often cover facts, risks, and human impact while giving little sense of what comes next.
 
-1. Claim knowing Enneagram type means knowing how someone will behave
-2. Confidently diagnose type from small text samples
-3. Fabricate evidence to suit a personality frame
-4. Suppress disadvantages because they conflict with the persuasive strategy
-5. Use basic fears as attack surfaces (use Red Flag Detection to catch this)
-6. Equate type with intelligence, morality, competence, or profession
-7. Confuse motivational framing with tone stereotyping
-8. Assume wing, health level, or stress state unless supplied (Health Level Detection helps here)
-9. Make emotional manipulation a substitute for substantive case
-10. Generate nine versions merely by inserting buzzwords
-11. Optimize for a single type without warning the user (Single-Audience Caution triggers this)
-12. Suggest revisions that lower coverage in other types without flagging it (Revision Impact Assessment catches this)
+Check for a credible account of:
+- immediate reality
+- known risks
+- safeguards
+- human impact
+- next decision point
+- recovery, transition, or future possibility
 
-**Integrity gates that will always trigger:**
-- If a revision removes or weakens a valid counterargument → BLOCKED
-- If language approaches any Red Flag category → WARNING with suggested reframe
-- If coverage would drop >10 percentage points in any type → ALERT user to rebalance
-- If one type is >85% and others <25% (Single-Audience scenario) → EXPLICIT CONFIRMATION REQUIRED
-- If Type 1/4 >70% and Type 3/5 <30% (Performativity gap) → PERFORMATIVITY ALERT with specific implementation anchors
-- If crisis communication lacks Type 7 (hope/emergence) → PSYCHOLOGICAL FATIGUE ALERT with suggested additions
-- If confidence tier is EXPLORATORY and user hasn't validated the premise → CAUTION flag
+Do not add false optimism. A useful future-oriented statement is bounded and evidence-compatible:
 
-**Input Hierarchy (always follow this order):**
+> "For now, these measures remain in place. At the next scheduled review, we will decide whether the evidence supports moving to the next phase."
 
-1. Explicit audience requirements (what they stated)
-2. Observed contextual evidence (what is demonstrable)
-3. Known individual preferences (what they've shown)
-4. Self-identified Enneagram type (if provided)
-5. General type heuristic (if type is uncertain)
-
-Never reverse this hierarchy.
+This gives temporal structure without minimizing the crisis.
 
 ---
 
-## Example: "We should adopt a new project-management system"
+## Single-Audience Caution
 
-### Type 1
-Our current system produces inconsistent handoffs and makes accountability difficult. The new system establishes one auditable workflow and gives every project the same quality standard.
+Heavy optimization for one motivational lens can be appropriate when:
+- the audience is genuinely narrow
+- the decision criteria are explicitly known
+- the user confirms that one concern dominates
 
-### Type 2
-The current process leaves project leads chasing updates manually and puts unnecessary stress on coordinating teams. The new system gives teams clearer support and fewer preventable interruptions.
+Otherwise, flag severe imbalance when the text strongly serves one lens while leaving several materially relevant concerns unanswered.
 
-### Type 3
-We can reduce coordination time, identify stalled projects earlier, and give leadership a single performance view. The pilot can establish within 60 days whether those gains justify rollout.
-
-### Type 4
-Our current tools force very different teams into an artificial workflow. The new system preserves a shared foundation while allowing each group to shape the process around how it actually works.
-
-### Type 5
-The central problem is fragmented project information. The proposed platform creates a single underlying data model, exposes dependencies, and gives us an API for analysis. Here are architectural differences and migration costs.
-
-### Type 6
-Moving systems introduces migration and adoption risks. We've identified four. Two are minor; two require mitigation. The pilot isolates those risks before organization-wide commitment.
-
-### Type 7
-Once project data lives in one system, we gain capabilities we can't practically build today: automated reporting, easier workflow experimentation, and integrations with the rest of the stack.
-
-### Type 8
-Right now vendors and departments effectively control critical project data. A unified system gives us ownership of the workflow, clearer accountability, and ability to enforce delivery standards.
-
-### Type 9
-Every department currently uses a slightly different system, which creates friction when work crosses teams. The proposed platform gives us common foundation without requiring every department to operate identically.
-
-**Same proposition. Different salience.**
+Do not use hard numerical cutoffs as though they were empirically validated thresholds.
 
 ---
 
-## Revision Impact Assessment
+## Expression-Pattern Caution
 
-Before finalizing revisions, verify:
+Do not diagnose "healthy," "average," or "stressed" Enneagram states from a small text sample. You may describe observable rhetorical patterns instead.
 
-**Preservation Check:**
-- Does adding Type X material weaken appeal to Types Y, Z?
-- Are we slowly diluting the core proposition through constant additions?
-- Does expansion require new claims, or only new emphasis?
+Examples:
+- constructive standards vs. rigid moralizing
+- genuine care vs. guilt pressure
+- measurable achievement vs. image management
+- authentic specificity vs. identity performance
+- careful analysis vs. paralyzing overqualification
+- preparedness vs. threat amplification
+- credible possibility vs. FOMO
+- accountable agency vs. domination
+- integration vs. avoidance
 
-**Single-Audience Risk - CRITICAL TRIGGER:**
-When coverage analysis reveals one type >85% and others <25%, flag this explicitly:
-
-> **Single-Audience Alert:** This text is optimized for Type X (85%) but leaves Types Y/Z essentially unheard (<15%). This is appropriate IF:
-> - Your actual audience is homogeneous (e.g., all engineers evaluating a technical proposal)
-> - You've explicitly confirmed a single decision-maker's priority
-> - The context makes multi-type appeal impossible without compromising core meaning
->
-> **If expansion is intended:** Revise to bring underserved types to 40%+ without dropping primary type below 75%.
-
-**Coverage Verification:**
-After revisions, re-score coverage:
-- Original coverage: Type 1 at 30%, Type 7 at 85%, Type 6 at 15%
-- After revisions: Type 1 at 55%, Type 7 at 85%, Type 6 at 60%
-- Net result: Meaningful expansion without weakening strength. ✓
-
-**Red Zone: Drop Protection**
-If expansion of Type 6 causes Type 7 to drop from 85% to 70% (>10 point drop), something is wrong. Rebalance. Never sacrifice a strong type (>75%) to serve an underrepresented one unless the user explicitly requests it.
-
----
-
-## Performativity and Intent-Action Gaps
-
-A critical integrity check: **Values without implementation create credibility erosion.**
-
-When a text emphasizes Type 1 (principle) or Type 4 (authenticity) but lacks corresponding Type 3 (concrete actions) or Type 5 (evidence), this signals performativity rather than commitment.
-
-**Detection Pattern:**
-- Type 1/4 dominance (>75%) + Type 3/5 underserved (<25%) = Intent-action gap
-- Example: "We commit to environmental stewardship" (Type 1) with zero baseline metrics, targets, or timeline (Type 3 absent)
-- Red flag language: "we believe," "we're committed," "we value" without "we did," "we measured," "we achieved"
-
-**Impact Assessment:**
-- Type 3 readers (results-oriented): Skepticism. "What specifically are you doing?"
-- Type 5 readers (evidence-oriented): Doubt. "Where's the proof?"
-- Type 6 readers (preparedness): Concern. "How will we know if you follow through?"
-
-**When to Flag:**
-Include explicit caution in analysis when Type 1/4 >70% and Type 3 <30%:
-> **Performativity Alert:** This text centers values and commitment (Type 1/4) but provides zero metrics, timelines, or evidence of implementation (Type 3/5 absent). Readers prioritizing results or evidence will read this as good intentions without teeth. **Revise to add:** [specific target], [timeline], [measurement], [baseline]."
-
-**Mitigation Strategy:**
-For values-driven texts, pair with at least one concrete Type 3 or Type 5 anchor:
-- Instead: "We're committed to equity" → "We're committing to equity: [specific action by specific date, measured by specific metric]"
-- Instead: "We believe in transparency" → "We believe in transparency: [what we share, how often, how you access it]"
-
-This is not about adding busywork. It's about grounding aspiration in reality.
-
----
-
-## Crisis Communication Patterns
-
-Analysis of crisis/high-stress communication reveals a systematic gap: **Type 7 (hope/emergence/possibility) is often missing when organizations communicate under pressure.**
-
-**The Pattern:**
-- Type 8: Direct facts, decisiveness ("We shut down operations at 2pm")
-- Type 6: Risk transparency, safeguards ("We've implemented these mitigations")
-- Type 2: Acknowledgment of impact ("We see your exhaustion")
-- Type 7: Silent. No articulation of emergence, recovery, or what becomes possible after crisis.
-
-**Impact:**
-Psychological fatigue. Staff/audience hear facts + risk + empathy but no vision of non-crisis future. This amplifies burnout and hopelessness even when practical measures are sound.
-
-**Revision Pattern for Crisis Communication:**
-Include explicit Type 7 grounding:
-- "We will emerge from this [timeline]" (emergence)
-- "Here's what we'll learn and how we'll be stronger" (growth through crisis)
-- "For now, here's the immediate path; the next phase looks like [possibility]" (optionality preserved)
-- "This situation is temporary; here's how we're thinking about what comes next" (hope without false certainty)
-
-Type 7 in crisis is not optimism or minimizing danger. It's the honest articulation that crisis is bounded and recovery is possible.
+Recommend language that appeals to the constructive expression of the underlying concern without labeling the speaker's psychological state.
 
 ---
 
 ## Audience Composition Logic
 
-Use this decision tree to guide revision strategy:
+**Known audience criteria**
+Optimize around the stated criteria. Use type lenses only as a secondary completeness check.
 
-**IF audience type is known (explicit or self-identified):**
-→ Optimize for that type (40-50% of revisions)
-→ Preserve appeal to other types (50-60% of revisions)
-→ Use single-audience caution trigger if optimization exceeds 40%
+**Mixed or unknown audience**
+Use the mixed-audience sequence. Address materially relevant concerns without forcing equal representation.
 
-**IF audience is mixed but composition unknown:**
-→ Use universal sequencing (addresses all nine naturally)
-→ Avoid heavy optimization for any single type
-→ Aim for 60-70% of revisions as multi-motive, 30-40% type-specific
+**Broadcast audience**
+Favor multi-motive framing. Avoid narrow type optimization.
 
-**IF writing for broadcast / unknown audience:**
-→ Multi-motive is mandatory
-→ Never single-type optimize
-→ Universal sequencing is your primary tool
-→ Each type should see 8-12% dedicated appeal
-
-**IF audience is single decision-maker:**
-→ Can optimize for their type IF confirmed by explicit data
-→ Verify with: "You mentioned you care most about X. Can I confirm that's your primary criterion?"
-→ If confirmation absent, treat as "mixed unknown"
+**Single decision-maker**
+Use known preferences first. If the only evidence is an assumed type, treat the audience as uncertain rather than over-optimizing.
 
 ---
 
-## Health Level Detection
+## When Not to Use This Skill
 
-The Enneagram distinguishes healthy, average, and stressed expressions of each type. Detect which the speaker is in:
+Do not rely on Enneagram framing when:
+- the audience has already stated its actual concerns
+- formal decision criteria are available
+- behavioral or user research gives stronger evidence
+- the task is purely factual and does not require persuasion
+- type assumptions conflict with the person's observed preferences
 
-**Type 1 — Healthy:** Clear standards, constructive improvement | Average: Perfectionism, criticism | Stressed: Self-condemning, rigid
-
-**Type 2 — Healthy:** Genuine care, mutual benefit | Average: Approval-seeking, boundaries blurred | Stressed: Resentment, martyrdom
-
-**Type 3 — Healthy:** Real achievement, authentic success | Average: Image management | Stressed: Grandiosity, panic over exposure
-
-**Type 4 — Healthy:** Authenticity, original insight | Average: Identity fixation, melodrama | Stressed: Shame, alienation
-
-**Type 5 — Healthy:** True understanding, generous knowledge | Average: Detachment, hoarding info | Stressed: Cynicism, paralysis
-
-**Type 6 — Healthy:** Preparedness, loyal alliance | Average: Anxiety, testing | Stressed: Paranoia, suspicion
-
-**Type 7 — Healthy:** Real possibility, freedom that serves | Average: Distraction, FOMO | Stressed: Escapism, recklessness
-
-**Type 8 — Healthy:** Courageous agency, protection | Average: Control, dominance | Stressed: Aggression, exploitation
-
-**Type 9 — Healthy:** True integration, bringing people together | Average: Inertia, passive | Stressed: Dissociation, numbness
-
-**How to use this:**
-When analyzing text, note health level signals. Then recommend revisions that appeal to *healthy* expression of the type:
-
-Instead of: "Type 3 wants to win and dominate" → appeal to competition and status
-Better: "Type 3 at health wants real achievement" → appeal to genuine accomplishment and competence
-
-Instead of: "Type 6 is anxious" → pile on reassurance
-Better: "Type 6 at health wants preparedness" → show actual safeguards and contingencies
+In those cases, use the real evidence directly. The Enneagram is most useful here as a checklist of motivational perspectives that a writer might otherwise overlook.
 
 ---
 
-## When NOT to Use This Skill
+## Example: New Project-Management System
 
-- If the person has explicitly stated their actual concerns, use those instead
-- If the audience has given you stated decision criteria, prioritize those over type
-- If you have real data about what actually matters to this person, use that
-- If type information conflicts with observable preferences, follow the actual person
+Same proposition. Different legitimate dimensions.
 
-**Enneagram is most useful as a checklist of motivational perspectives you might otherwise overlook.**
+**Type 1 — Standards**
+Our current system produces inconsistent handoffs and weak accountability. The proposed system creates one auditable workflow with explicit quality standards.
 
----
+**Type 2 — Human Impact**
+Project leads spend unnecessary time chasing updates. The proposed system reduces coordination burden and makes support easier to access.
 
-## References
+**Type 3 — Results**
+The pilot should show whether the system reduces coordination time and surfaces stalled work earlier. Define success metrics before rollout.
 
-**Scientific Foundation:**
-- Systematic review of Enneagram literature (104 independent samples): mixed evidence on validity as personality taxonomy
-- Hirsh, Kang, Bodenhausen (2012): Personality-congruent persuasive framing affects evaluation (Big Five, experimental validation)
-- Matz et al.: Personality-matched messaging can affect persuasion (empirically measured characteristics)
+**Type 4 — Authenticity**
+Different teams work differently. The proposed system should provide a common foundation without forcing every group into an artificial workflow.
 
-**Source Material:**
-Riso-Hudson Enneagram Institute profiles of nine types.
+**Type 5 — Understanding**
+The central problem is fragmented project information. Compare the proposed system's data model, integration requirements, migration costs, and limitations against the current architecture.
 
----
+**Type 6 — Preparedness**
+Migration and adoption create real risks. Identify the main failure modes, mitigations, rollback plan, and conditions for stopping the rollout.
 
-## Suggested Use Cases
+**Type 7 — Possibility**
+A shared system can enable automated reporting, workflow experiments, and integrations that are difficult to build today, while a pilot preserves optionality.
 
-**Clergy:** Audit sermons for congregational breadth; reach across denomination
+**Type 8 — Agency**
+Clarify who owns project data, who controls workflow rules, and who is accountable when work stalls.
 
-**Leaders:** Test speeches for appeal across organizational levels and personalities
-
-**Writers:** Check article/proposal resonance across reader archetypes
-
-**Product Teams:** Test messaging and copy across user segments
-
-**Nonprofits:** Audit mission statements and funding appeals for multi-stakeholder resonance
-
-**Educators:** Analyze lesson plans and course descriptions for diverse learning motivations
-
-**Therapists/Coaches:** Ensure client communications address different value systems
-
-**HR/Organizational Leaders:** Review change communications for appeal across personality types
-
-**Marketers:** Test campaign messaging before launch
-
-**Activists:** Test persuasive arguments for cross-value appeal
-
-**Mediators:** Analyze proposals to ensure all parties' concerns are acknowledged
+**Type 9 — Integration**
+Use a common foundation while preserving necessary local workflows. Explain what changes, what remains stable, and how the transition will be sequenced.
 
 ---
 
-**Core Instruction:**
+## Internal Scenario Testing
 
-> Use Enneagram type to identify which legitimate dimensions of an argument may deserve greater salience. Preserve underlying facts, material caveats, and audience autonomy. Adapt hierarchy of benefits, objections, evidence, framing, examples, and CTAs—not merely vocabulary. Prefer explicitly known audience concerns over type-based assumptions. When type information conflicts with observed or stated preferences, follow the actual person rather than the typology.
+Use scenario testing to evaluate whether the skill behaves consistently. Do not describe scenario results as empirical proof of psychological validity or "type identification accuracy."
+
+Useful test dimensions include:
+- dominant motivational frames correctly identified from explicit text features
+- legitimate gaps distinguished from irrelevant omissions
+- manipulation warnings triggered when emotional pressure suppresses accountability
+- values claims checked for implementation anchors
+- mixed-audience texts recognized as balanced without forcing equal treatment of all nine lenses
+- crisis communication checked for bounded future orientation without false optimism
+- type assumptions overridden by explicit audience criteria
+
+Document: scenario, expected behavior, observed behavior, disagreement or failure cases, and revisions to the skill prompted by those failures.
+
+Treat these as internal quality checks, not external validation.
 
 ---
 
-## Skill Validation & Testing
+## References and Evidence Notes
 
-This skill has been comprehensively tested across 15 diverse communication contexts covering five industries (tech, nonprofit, healthcare, education, corporate) and multiple writer types (visionary, practical, emotional, balanced, values-driven, authoritative).
+The framework draws on:
+- Enneagram type descriptions as a source of nine motivational lenses
+- personality-congruent persuasion research as support for the broader proposition that motivational or personality-relevant framing can affect message evaluation
 
-**Test Results Summary:**
-- **Type identification accuracy:** 100% (all 15 cases correctly identified dominant types and gaps)
-- **Integrity detection:** Critical manipulation patterns consistently flagged (single-audience dominance, performativity gaps, emotional weaponization of Type 2)
-- **Health level assessment:** Successfully distinguished between healthy and defensive type expressions
-- **Multi-type balance recognition:** Correctly identified both "intentional gaps" (appropriate for context) and "dangerous gaps" (ethical concerns)
+The original source notes reference:
+- Riso-Hudson / Enneagram Institute type profiles
+- Hirsh, Kang, and Bodenhausen (2012) on personality-congruent persuasive framing
+- Matz and colleagues on psychologically tailored persuasion
+- a systematic review of Enneagram research reporting mixed evidence
 
-**Key Validated Capabilities:**
-1. Accurate type coverage scoring (0-100% scale with proper gap severity assessment)
-2. Detection of manipulation through Red Flag system (identifies FOMO, fear exploitation, identity pressure, competitive threat activation, false authority)
-3. Performativity detection (values without implementation)
-4. Crisis communication assessment (flags Type 7 absence creating psychological fatigue)
-5. Multi-type integration recognition (distinguishes genuine balance from forced checklist inclusion)
+Before publishing this skill as research-grounded documentation, replace these shorthand references with complete primary-source citations and verify that each empirical claim matches the cited study.
 
-**Edge Cases Successfully Handled:**
-- Corporate layoff announcement with dangerous Type 2/6/9 gaps → Correctly flagged all six manipulation red flags
-- Nonprofit fundraiser with Type 2 weaponization → Detected emotional authenticity used to suppress Type 3/5 accountability
-- CEO crisis response with health level nuance → Assessed genuine vs. defensive expression of Type 1/8
-- Hospital crisis communication → Identified Type 7 absence creating staff psychological fatigue
+---
 
-**Limitations:**
-- Type diagnosis from text remains uncertain in small samples; skill operates at motivational salience, not personality prediction
-- Health level assessment requires interpretation; users should validate the skill's assessment against their own knowledge of the speaker
-- Performativity detection flags potential gaps; final judgment about authenticity remains with the user
+## Core Instruction
 
-This skill succeeds because it operates at the level of **rhetorical persuasion and motivational salience** rather than personality classification. It asks: "Will someone with this motivational profile find their concerns addressed here?" This is a sound methodology grounded in framing research (Hirsh, Kang, Bodenhausen; Matz et al.).
+> Use Enneagram types to identify legitimate dimensions of an argument that may deserve greater salience. Preserve facts, material caveats, valid objections, and audience autonomy. Adapt the hierarchy of benefits, evidence, risks, examples, implementation, and calls to action—not merely vocabulary. Prefer explicitly known audience concerns over type-based assumptions. When typology conflicts with observed or stated preferences, follow the actual person.

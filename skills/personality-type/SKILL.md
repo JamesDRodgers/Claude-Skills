@@ -1,18 +1,19 @@
 ---
 name: personality-type
 description: >
-  Enneagram Audience Reach. Analyzes writing to discover which audiences truly
-  hear the message, then suggests targeted revisions to reach underserved
-  audiences—without compromising integrity. Most persuasion fails because
-  ideas are framed for one motivational lens while others ask different
-  questions; this skill identifies which Enneagram types a text currently
-  resonates with, then shifts which legitimate dimensions of the argument
-  receive emphasis, not tone or buzzwords. Separates motivational framing from
-  tone, preserves facts and counterarguments, includes red flag detection for
-  manipulation, and quantifies coverage improvements with a confidence tier
-  and integrity check on every suggestion. Use for proposals, speeches,
-  mission statements, leadership communications, marketing, mediation,
-  education, or any communication meant to land across diverse audiences.
+  Analyze communication to identify which Enneagram types it resonates with,
+  then broaden audience reach without compromising integrity. This skill
+  detects the motivational frames dominating your message, reveals
+  underserved audiences, and suggests targeted revisions that make your case
+  legible across all nine types. Advanced features: Performativity Detection
+  flags values claimed but not reflected in action; Manipulation Guard Rails
+  identifies fear, false scarcity, shame, or weaponized belonging and offers
+  ethical alternatives; Crisis Communication Lens adds hope alongside risk
+  management; Type 2 Weaponization Recognition separates genuine care from
+  suppression of accountability; Integrity Validation expands resonance
+  without weakening facts, evidence, or the core proposition. Works across
+  speeches, proposals, articles, mission statements, change communications,
+  sermons, fundraising, and stakeholder messaging.
 ---
 
 # Enneagram Audience Reach
@@ -60,6 +61,47 @@ For each type, ask: "If someone with this motivational profile reads this text, 
 
 Output shows both current coverage and post-revision coverage, so users can see the net improvement.
 
+## Gap Severity: Understanding the Impact of Underserved Types
+
+Coverage percentage tells you how much a type is addressed. Gap Severity tells you how critical it is that you address them—the impact on overall credibility and persuasiveness if you leave that type behind.
+
+### Severity Tiers
+
+**HIGH SEVERITY:**
+- Type is completely absent from the text
+- OR type's concerns are actively dismissed or contradicted ("some people worry about X, but that's not the real issue")
+- Impact: Audience with this type feels unheard or attacked. They're likely to reject your entire argument as insensitive to their legitimate concerns.
+- Example: A text names harm to people (Type 2 concern) but then pivots to "the real subject is curiosity." Type 2 reads this as: "Your concern about human impact is secondary to our analytical interest." That dismissal damages credibility.
+
+**MEDIUM SEVERITY:**
+- Type's concern is mentioned but thin
+- Key question answered only obliquely or partially
+- Impact: Audience with this type notices the gap. They don't feel attacked, but they feel unaddressed. May seek information elsewhere. Mild credibility hit.
+- Example: Text mentions risk exists ("can easily become harassment") but provides no analysis of when or how. Type 6 (risk-conscious) feels the concern was acknowledged but abandoned.
+
+**LOW SEVERITY:**
+- Type is adequately served relative to text's scope
+- Not a primary audience, but their concerns are sufficiently covered they won't feel unheard
+- Impact: Type can read the text and think "this isn't written for me, but I'm not uncomfortable with it either."
+- Example: Type 8 (control/agency) in an analytical essay on language. The text isn't about power dynamics, but it's also not denying Type 8's concerns. They simply aren't the audience.
+
+### How to Assess Severity
+
+Ask yourself: If someone with this type read my text, would they feel:
+1. Heard and respected? → LOW severity (adequate coverage)
+2. Mostly heard, with some gaps? → MEDIUM severity (thin coverage)
+3. Unheard or dismissed? → HIGH severity (absent or contradicted)
+
+The severity jumps to HIGH when a type's core question is answered dismissively. It's not about quantity of words—it's about whether the answer feels genuine or like a deflection.
+
+### Why Severity Matters for Revision Strategy
+
+HIGH SEVERITY gaps demand immediate attention. Leaving them unaddressed costs you credibility with that audience segment, and it often signals a blind spot in your thinking.
+
+MEDIUM SEVERITY gaps are worth filling if you have the space and energy, but they're not credibility threats.
+
+LOW SEVERITY gaps may not need revision at all. A text can't appeal equally to all nine types; sometimes acknowledging a type's legitimacy without centering them is the right call.
+
 ## Epistemic Warning
 
 The Enneagram is **not** empirically established as a nine-type personality taxonomy. The scientific evidence is mixed: some studies support reliability, others don't. Wings and movement between types have limited empirical support.
@@ -98,11 +140,23 @@ For each underserved type, the skill suggests:
 
 ### Output
 
-- **Type Coverage Map:** Quantified (which types are 0-25% / 26-50% / 51-75% / 76-100% addressed)
-- **Gap Severity:** Low (type unmentioned) / Medium (mentioned but thin) / High (actively dismissed)
-- **Specific revision suggestions:** Paragraph-level, with confidence tier attached
+BEFORE presenting the Type Coverage Map, provide context:
+- Explain what the percentages represent: "This map shows how fully each type's motivational question is answered in your text."
+- Clarify what the bands mean: What does 0-25% represent vs. 76-100%? (See Coverage Quantification section)
+- Name your primary audience: "Your text speaks most directly to Types X, Y, Z (76-100%). These are your core audience."
+- Identify the gaps: "Types A and B are significantly underserved. Here's the impact of each gap..."
+
+Then present:
+- **Type Coverage Map:** A clear visualization or table showing quantified coverage (0-25% / 26-50% / 51-75% / 76-100%) for each type
+- **Gap Severity with Explanation:** For each underserved type, explain why the severity is rated HIGH/MEDIUM/LOW
+  - HIGH: "Type completely absent" or "Concern dismissed/contradicted" — explain which and show the impact on credibility
+  - MEDIUM: "Mentioned but thin" — show what's addressed vs. what's missing
+  - LOW: "Adequately served for scope" — explain why this type doesn't need immediate revision
+- **Specific revision suggestions:** Paragraph-level, with confidence tier attached (HIGH/MODERATE/EXPLORATORY)
 - **Integrity check:** Does expansion require compromising the core message?
 - **Red flag summary:** Any signs of creeping manipulation detected?
+
+**CRITICAL DESIGN PRINCIPLE:** The Type Coverage Map is meaningless without context. A user seeing raw percentages ("Type 1: 45%, Type 2: 20%") has no idea why those numbers matter or what they should do. Always lead with interpretation: "Your message resonates strongly with Types X and Y but nearly misses Types A and B. Here's what that means for your credibility and reach..." THEN show the map. The explanation precedes the data.
 
 ---
 
